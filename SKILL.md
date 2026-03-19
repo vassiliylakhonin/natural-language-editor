@@ -16,6 +16,8 @@ Rewrite user text so it reads naturally while preserving intent and facts.
 - `edit --light [text]` — minimal edits only
 - `edit --deep [text]` — stronger restructuring, same meaning
 - `edit --anti-ai [text]` — reduce templated/AI-like cadence while preserving meaning
+- `edit --linkedin [text]` — optimize for LinkedIn profile/about style (credible, concrete, concise)
+- `edit --keep-length [text]` — preserve source length within ±10% while improving naturalness
 - `edit --json [text]` — structured analysis + rewrite
 
 If the user provides only text, use default natural mode.
@@ -53,13 +55,21 @@ Allow stronger sentence-level restructuring while preserving meaning.
 ### Anti-AI
 Reduce robotic markers (template transitions, repetitive cadence, hedge stacking, generic intensifiers). Vary sentence rhythm and prefer concrete wording while preserving facts and intent.
 
+### LinkedIn
+Optimize for LinkedIn profile/about usage: strong first-person positioning, concrete outcomes, credible tone, and scannable structure. Avoid hype, clichés, and overclaiming.
+
+### Keep-Length (±10%)
+Rewrite naturally while keeping total character length close to the source (target within ±10%). Prioritize meaning preservation first, then length control.
+
 ## Rewrite Workflow
 
 1. Identify friction points (repetition, filler, generic transitions, vagueness, rhythm issues, tone mismatch, AI-like templating).
 2. Choose the least invasive mode that solves the problem.
 3. Rewrite while preserving facts, claims, terminology, and perspective.
 4. For `--anti-ai`, explicitly remove robotic patterns and smooth cadence without adding subjectivity.
-5. Validate output: no factual additions, no distortion, better readability.
+5. For `--linkedin`, prioritize concrete achievements, clean role framing, and concise professional tone without adding new claims.
+6. For `--keep-length`, check source vs rewrite length and adjust to stay within ±10%.
+7. Validate output: no factual additions, no distortion, better readability.
 
 ## Output Format
 
